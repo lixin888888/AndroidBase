@@ -1,4 +1,4 @@
-package com.lixin.xinu.Fragments;
+package com.lixin.xinu.fragments;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.lixin.xinu.Interfaces.OnFragmentInteractionListener;
+import com.lixin.xinu.interfaces.OnFragmentInteractionListener;
 import com.lixin.xinu.adapters.SimpleFragmentPagerAdapter;
 import com.lixin.xinu.adapters.mainAdapter;
 import com.lixin.xinu.beans.shopMain;

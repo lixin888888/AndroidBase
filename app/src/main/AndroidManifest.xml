@@ -4,12 +4,12 @@
     package="com.lixin.xinu">
 
     <!-- 添加网络操作权限 -->
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 往SDCard写入数据权限 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <!-- 相机权限 -->
-    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 相机权限 -->
+    <uses-permission android:name="android.permission.CAMERA" /> <!-- 这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行 -->
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
 
     <application
         android:allowBackup="true"
@@ -20,22 +20,35 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name="com.lixin.xinu.MainActivity">
+        <receiver
+            android:name=".broadcasts.AlarmReceiver"
+            android:enabled="true"
+            android:exported="true"/>
+
+        <service
+            android:name=".services.AlarmIntentService"
+            android:exported="false" />
+        <service
+            android:name=".services.AlarmService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.lixin.xinu.ShopActivity" />
+        <activity android:name=".activities.ShopActivity" />
         <activity
             android:name="com.yalantis.ucrop.UCropActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name="com.lixin.xinu.boos.BossEditActivity" />
+        <activity android:name=".boos.BossEditActivity" />
 
         <provider
-            android:name="com.lixin.xinu.utils.GenericFileProvider"
+            android:name=".utils.GenericFileProvider"
             android:authorities="${applicationId}.my.provider"
             android:exported="false"
             android:grantUriPermissions="true">
@@ -44,8 +57,8 @@
                 android:resource="@xml/provider_paths" />
         </provider>
 
-        <activity android:name="com.lixin.xinu.TestEventBus.TestEventbusActivity" />
-        <activity android:name="com.lixin.xinu.TestEventBus.TestEventbus02Activity"></activity>
+        <activity android:name=".testEventBus.TestEventbusActivity" />
+        <activity android:name=".testEventBus.TestEventbus02Activity" />
     </application>
 
 </manifest>

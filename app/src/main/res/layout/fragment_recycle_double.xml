@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lixin.xinu.Fragments.Recycle_doubleFragment">
+    tools:context="com.lixin.xinu.fragments.Recycle_doubleFragment">
     <LinearLayout
         android:layout_width="match_parent"
         android:weightSum="7"

@@ -6,7 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
-import com.lixin.xinu.Fragments.PagerFragment;
+import com.lixin.xinu.fragments.PagerFragment;
 
 /**
  * 数据转换成fragment的适配器

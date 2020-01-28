@@ -1,4 +1,4 @@
-package com.lixin.xinu.TestEventBus;
+package com.lixin.xinu.testEventBus;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.lixin.xinu.Fragments;
+package com.lixin.xinu.fragments;
 
 import android.content.Context;
 import android.net.Uri;

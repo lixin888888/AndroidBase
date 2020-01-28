@@ -1,10 +1,11 @@
-package com.lixin.xinu;
+package com.lixin.xinu.activities;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.FrameLayout;
 
-import com.lixin.xinu.Fragments.Recycle_doubleFragment;
+import com.lixin.xinu.R;
+import com.lixin.xinu.fragments.Recycle_doubleFragment;
 
 public class ShopActivity extends AppCompatActivity {
     private FrameLayout container;

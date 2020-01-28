@@ -2,11 +2,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lixin.xinu.Fragments.MineFragment">
+    tools:context="com.lixin.xinu.fragments.MineFragment">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="UselessParent">
 
     <Button
         android:id="@+id/testEventBus"
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:text="EventBus" />
+
+    <Button
+        android:id="@+id/testAlarm"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:text="Alarm Start" />
+</LinearLayout>
+
+
 </FrameLayout>

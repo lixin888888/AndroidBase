@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TestEventBus.TestEventbus02Activity">
+    tools:context=".testEventBus.TestEventbus02Activity">
     <Button
         android:text="发出事件"
         android:id="@+id/postEvent"

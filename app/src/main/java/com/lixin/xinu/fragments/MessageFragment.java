@@ -1,37 +1,32 @@
-package com.lixin.xinu.Fragments;
+package com.lixin.xinu.fragments;
 
 import android.content.Context;
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import com.lixin.xinu.Interfaces.OnFragmentInteractionListener;
-import com.lixin.xinu.beans.TellMainWhat;
+
+import com.lixin.xinu.interfaces.OnFragmentInteractionListener;
 import com.lixin.xinu.R;
-
-
-
-public class MineFragment extends Fragment implements View.OnClickListener {
+public class MessageFragment extends Fragment {
+    // TODO: Rename parameter arguments, choose names that match
+    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-    private Context mContext;
-    private Button testEventBus;
 
+    // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
     private OnFragmentInteractionListener mListener;
-    private TellMainWhat tell;
 
-    public MineFragment() {
+    public MessageFragment() {
         // Required empty public constructor
     }
 
-    public static MineFragment newInstance(String param1, String param2) {
-        MineFragment fragment = new MineFragment();
+    public static MessageFragment newInstance(String param1, String param2) {
+        MessageFragment fragment = new MessageFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -51,17 +46,13 @@ public class MineFragment extends Fragment implements View.OnClickListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_mine, container, false);
-        testEventBus = view.findViewById(R.id.testEventBus);
-        testEventBus.setOnClickListener(this);
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_message, container, false);
     }
 
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        this.mContext = context;
-        tell = (TellMainWhat) context;
         //        if (context instanceof OnFragmentInteractionListener) {
         //            mListener = (OnFragmentInteractionListener) context;
         //        } else {
@@ -76,12 +67,14 @@ public class MineFragment extends Fragment implements View.OnClickListener {
         mListener = null;
     }
 
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()){
-            case R.id.testEventBus:
-                tell.tellMain("testEventBus");
-                break;
-        }
-    }
+    /**
+     * This interface must be implemented by activities that contain this
+     * fragment to allow an interaction in this fragment to be communicated
+     * to the activity and potentially other fragments contained in that
+     * activity.
+     * <p>
+     * See the Android Training lesson <a href=
+     * "http://developer.android.com/training/basics/fragments/communicating.html"
+     * >Communicating with Other club.ijava.lixin03.Fragments</a> for more information.
+     */
 }

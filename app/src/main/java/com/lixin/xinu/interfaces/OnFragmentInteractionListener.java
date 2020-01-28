@@ -1,4 +1,4 @@
-package com.lixin.xinu.Interfaces;
+package com.lixin.xinu.interfaces;
 
 import android.net.Uri;
 

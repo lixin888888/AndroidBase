@@ -18,7 +18,7 @@ import java.util.List;
 import com.lixin.xinu.beans.shopMain;
 import com.lixin.xinu.MainActivity;
 import com.lixin.xinu.R;
-import com.lixin.xinu.ShopActivity;
+import com.lixin.xinu.activities.ShopActivity;
 
 /**
  * 给每一个Fragment里面的RecycleView的数据展示控件

@@ -13,13 +13,13 @@ import android.widget.LinearLayout;
 
 import java.lang.ref.WeakReference;
 
-import com.lixin.xinu.Fragments.CartFragment;
-import com.lixin.xinu.Fragments.HomeFragment;
-import com.lixin.xinu.Fragments.MessageFragment;
-import com.lixin.xinu.Fragments.MineFragment;
-import com.lixin.xinu.Interfaces.OnFragmentInteractionListener;
+import com.lixin.xinu.fragments.CartFragment;
+import com.lixin.xinu.fragments.HomeFragment;
+import com.lixin.xinu.fragments.MessageFragment;
+import com.lixin.xinu.fragments.MineFragment;
+import com.lixin.xinu.interfaces.OnFragmentInteractionListener;
 import com.lixin.xinu.beans.TellMainWhat;
-import com.lixin.xinu.TestEventBus.TestEventbusActivity;
+import com.lixin.xinu.testEventBus.TestEventbusActivity;
 
 public class MainActivity extends AppCompatActivity  implements OnFragmentInteractionListener, TellMainWhat {
     private android.support.v4.app.Fragment CurrentFragment;

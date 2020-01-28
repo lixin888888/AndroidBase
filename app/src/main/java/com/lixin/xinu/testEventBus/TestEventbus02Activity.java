@@ -1,5 +1,5 @@
 
-package com.lixin.xinu.TestEventBus;
+package com.lixin.xinu.testEventBus;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
