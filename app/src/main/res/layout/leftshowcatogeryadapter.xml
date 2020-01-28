@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:paddingLeft="18dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:paddingRight="18dp"
+    android:layout_height="48dp">
+    <TextView
+        android:id="@+id/activity_food_category"
+        android:textSize="18sp"
+        android:text="超值套餐"
+        android:textColor="#000"
+        android:gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+</LinearLayout>

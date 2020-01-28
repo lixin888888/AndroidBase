@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="wangyiyun">#e0433a</color>
+    <color name="pulish_background">#393a3f</color>
+    <color name="wechat_color">#1aad19</color>
+    <color name="touming">#00FFFFFF</color>
+</resources>

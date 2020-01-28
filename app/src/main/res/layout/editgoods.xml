@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="150dp">
+        <ImageView
+            android:id="@+id/main_goods_image"
+            android:layout_width="150dp"
+            android:layout_height="150dp" />
+        <!--左边的两个位置-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="40dp"
+            android:layout_height="150dp">
+            <ImageView
+                android:id="@+id/xiajia_goods"
+                android:src="@drawable/ic_xiajia"
+                android:layout_width="28dp"
+                android:layout_marginTop="18dp"
+                android:layout_gravity="center"
+                android:layout_marginBottom="64dp"
+                android:layout_height="28dp" />
+            <ImageView
+                android:id="@+id/edit_goods"
+                android:src="@drawable/ic_edit"
+                android:layout_width="28dp"
+                android:layout_gravity="center"
+                android:layout_height="28dp" />
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:gravity="center"
+        android:text="商品名称"
+        android:id="@+id/edit_goods_goods_name"
+        android:layout_width="150dp"
+        android:layout_height="30dp" />
+</LinearLayout>

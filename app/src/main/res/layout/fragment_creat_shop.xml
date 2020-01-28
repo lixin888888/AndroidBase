@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".boos.CreatShopFragment">
+    <LinearLayout
+        android:id="@+id/bigroot"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout android:layout_width="match_parent"
+            android:background="@color/pulish_background"
+            android:paddingRight="8dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:layout_height="wrap_content">
+            <Button android:layout_width="36dp"
+                android:id="@+id/backto"
+                android:layout_marginLeft="8dp"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/ic_back"
+                android:layout_height="36dp"/>
+            <Button android:layout_width="60dp"
+                android:text="保存"
+                android:id="@+id/publishMessage"
+                android:textSize="14sp"
+                android:textColor="#ffffff"
+                android:background="@drawable/shape"
+                android:layout_alignParentRight="true"
+                android:layout_height="36dp"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:weightSum="10"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+            <LinearLayout
+                android:background="@drawable/textview_border"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="店铺名称"
+                    android:textColor="@color/wechat_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <LinearLayout
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/textview_border"
+                    android:layout_width="match_parent"
+                    android:gravity="center"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:id="@+id/shop_Title"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:weightSum="10"
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="42dp">
+            <LinearLayout
+                android:background="@drawable/textview_border"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="联系电话"
+                    android:textColor="@color/wechat_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <LinearLayout
+                    android:layout_marginLeft="6dp"
+                    android:layout_marginRight="6dp"
+                    android:background="@drawable/textview_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:id="@+id/shop_phone"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:background="@drawable/textview_border"
+                android:layout_weight="2"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:layout_height="40dp">
+                <TextView
+                    android:text="经营范围"
+                    android:textColor="@color/wechat_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="3"
+                android:layout_width="0dp"
+                android:layout_height="40dp">
+                <LinearLayout
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/textview_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:background="@null"
+                        android:id="@+id/shop_catogery"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:weightSum="10"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="102dp">
+            <LinearLayout
+                android:background="@drawable/textview_border"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="100dp">
+                <TextView
+                    android:text="商铺\n介绍"
+                    android:textColor="@color/wechat_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_weight="8"
+                android:layout_width="0dp"
+                android:layout_height="100dp">
+                <LinearLayout
+                    android:layout_marginLeft="6dp"
+                    android:background="@drawable/textview_border"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <EditText
+                        android:id="@+id/shop_description"
+                        android:background="@null"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:paddingLeft="4dp"
+            android:paddingRight="4dp"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="102dp">
+            <LinearLayout
+                android:background="@drawable/textview_border"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:layout_width="0dp"
+                android:layout_height="100dp">
+                <TextView
+                    android:text="商铺\n图片"
+                    android:textColor="@color/wechat_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_weight="8"
+                android:layout_marginLeft="6dp"
+                android:layout_width="0dp"
+                android:background="@drawable/textview_border"
+                android:layout_height="100dp">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:scrollbars="none"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/shops_image_container"
+                        android:paddingLeft="8dp"
+                        android:paddingRight="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/edit_my_goods"
+            android:text="查看商品"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+</FrameLayout>

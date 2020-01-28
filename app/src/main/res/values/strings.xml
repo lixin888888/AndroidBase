@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Dog</string>
+    <string name="yueshou">月售  </string>
+    <string name="qisong">起送¥</string>
+    <string name="peisong">  配送¥</string>
+    <string name="costtime">分钟  </string>
+    <string name="castroad">km</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="permission_request_denied">Permission request denied</string>
+    <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM
+	</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

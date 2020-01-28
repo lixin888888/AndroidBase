@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp">
+    <ImageView
+        android:layout_alignParentLeft="true"
+        android:id="@+id/food_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp" />
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_toRightOf="@+id/food_image"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp">
+        <TextView
+            android:id="@+id/food_title"
+            android:text="金波闪闪厚牛汉堡"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="24dp" />
+        <TextView
+            android:paddingRight="4dp"
+            android:id="@+id/food_detail"
+            android:textSize="12dp"
+            android:text="主要原料: 面包 鸡肉 生菜 风味沙拉酱"
+            android:layout_width="wrap_content"
+            android:layout_height="48dp" />
+        <TextView
+            android:id="@+id/food_sales"
+            android:text="月售23 赞1"
+            android:textSize="14sp"
+            android:layout_width="wrap_content"
+            android:layout_height="18dp" />
+        <TextView
+            android:id="@+id/foods_price"
+            android:layout_width="wrap_content"
+            android:text="23.5 只"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:textColor="@color/wangyiyun"
+            android:layout_height="30dp" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/food_selected"
+        android:src="@color/wangyiyun"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="20dp"
+        android:layout_height="20dp" />
+</RelativeLayout>
