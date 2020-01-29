@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Vibrator;
 import android.util.Log;
 
+import com.lixin.xinu.functions.notification.NotifacationUtil;
 
 
 public class AlarmReceiver extends BroadcastReceiver {
@@ -17,7 +18,8 @@ public class AlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         Log.e(TAG, "onReceive: " );
         validator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
-        startVibrator();
+        NotifacationUtil.setNotifaction(context);
+        //startVibrator();
     }
 
     /**
