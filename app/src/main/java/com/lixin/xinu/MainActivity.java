@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 
 import java.lang.ref.WeakReference;
 
+import com.gyf.immersionbar.ImmersionBar;
 import com.lixin.xinu.fragments.CartFragment;
 import com.lixin.xinu.fragments.HomeFragment;
 import com.lixin.xinu.fragments.MessageFragment;
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity  implements OnFragmentIntera
         initListener(R.id.f_mine);
         initFragment("home");
         changeIcon("home");
+        //初始化沉浸式
+        initImmersionBar();
     }
 
     @Override
@@ -164,6 +167,15 @@ public class MainActivity extends AppCompatActivity  implements OnFragmentIntera
                 }
             }
         }
+    }
+
+    /**
+     * 初始化沉浸式
+     * Init immersion bar.
+     */
+    protected void initImmersionBar() {
+        //设置共同沉浸式样式
+        ImmersionBar.with(this).statusBarColor(R.color.wangyiyun).fitsSystemWindows(true).init();    //状态栏颜色，不写默认透明色.init();
     }
 
 }

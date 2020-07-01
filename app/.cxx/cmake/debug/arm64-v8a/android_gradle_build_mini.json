@@ -1,0 +1,12 @@
+{
+  "buildFiles": [
+    "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/platforms.cmake",
+    "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake",
+    "/Users/lixin/javaWeb/app/AndroidBase/app/CMakeLists.txt"
+  ],
+  "cleanCommands": [
+    "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/debug/arm64-v8a\" clean"
+  ],
+  "buildTargetsCommand": "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/debug/arm64-v8a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "libraries": {}
+}

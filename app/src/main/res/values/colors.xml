@@ -6,5 +6,7 @@
     <color name="wangyiyun">#e0433a</color>
     <color name="pulish_background">#393a3f</color>
     <color name="wechat_color">#1aad19</color>
-    <color name="touming">#00FFFFFF</color>
+    <color name="touming">#00FFFF</color>
+    <color name="mywhite">#F6F3F3</color>
+    <color name="myblack">#000000</color>
 </resources>
