@@ -2,4 +2,5 @@
 全民购物Android端  个人开源项目
 
 截图
- ![](http://i1.piimg.com/588926/d1cb3dda0bdf8cd1.png)
+
+![在这里插入图片描述](https://img-blog.csdnimg.cn/2020070417504555.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQwNTkyNDg0,size_16,color_FFFFFF,t_70)
