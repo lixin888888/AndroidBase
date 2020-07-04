@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity  implements OnFragmentIntera
                     fragment= HomeFragment.newInstance();
                     break;
                 case "message":
-                    fragment = MessageFragment.newInstance("q","w");
+                    fragment = MessageFragment.newInstance(this.getApplicationContext());
                     break;
                 case "cart":
                     fragment = CartFragment.newInstance("q","w");

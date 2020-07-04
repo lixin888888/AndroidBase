@@ -1,6 +1,9 @@
 package com.lixin.xinu.dto;
 
+
+
 public class SearchGoodsQueryParam {
+
 
     // 某个店铺
     Integer ShopId;
@@ -14,9 +17,14 @@ public class SearchGoodsQueryParam {
     //某个分类
     Short classify3;
 
-
     // 促销
     Integer recommandStatus;
+
+    // 当前页数
+    Integer pageNo;
+
+    // 页面大小
+    Integer pageSize;
 
     public SearchGoodsQueryParam() {
     }
@@ -61,14 +69,19 @@ public class SearchGoodsQueryParam {
         this.recommandStatus = recommandStatus;
     }
 
-    @Override
-    public String toString() {
-        return "SearchGoodsQueryParam{" +
-                "ShopId=" + ShopId +
-                ", classify1=" + classify1 +
-                ", classify2=" + classify2 +
-                ", classify3=" + classify3 +
-                ", recommandStatus=" + recommandStatus +
-                '}';
+    public Integer getPageNo() {
+        return pageNo;
+    }
+
+    public void setPageNo(Integer pageNo) {
+        this.pageNo = pageNo;
+    }
+
+    public Integer getPageSize() {
+        return pageSize;
+    }
+
+    public void setPageSize(Integer pageSize) {
+        this.pageSize = pageSize;
     }
 }

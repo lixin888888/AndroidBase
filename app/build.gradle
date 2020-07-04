@@ -9,6 +9,13 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        packagingOptions {
+            //解决编译时com.android.builder.merge.DuplicateRelativeFileException: More than one file was found with OS independent path 'META-INF/rxjava.properties'这个错误
+            exclude 'META-INF/rxjava.properties'
+        }
+
+
         externalNativeBuild {
             cmake {
                 cppFlags ""
@@ -26,7 +33,11 @@ android {
             path "CMakeLists.txt"
         }
     }
-    ndkVersion '21.3.6528147'
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+        ndkVersion '21.3.6528147'
 }
 
 dependencies {
@@ -62,5 +73,20 @@ dependencies {
     implementation 'com.gyf.immersionbar:immersionbar-components:3.0.0'//状态栏沉浸式
     implementation 'com.squareup.retrofit2:retrofit:2.9.0' //网络请求
     implementation 'com.squareup.retrofit2:converter-gson:2.9.0' // gson转换
+    implementation 'org.projectlombok:lombok:1.18.12'
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.5.0'
+
+    // 注意：分包之后不会有默认的Header和Footer需要手动添加！还是原来的三种方法！
+    implementation  'com.scwang.smart:refresh-layout-kernel:2.0.1'      //核心必须依赖
+    implementation  'com.scwang.smart:refresh-header-classics:2.0.1'    //经典刷新头
+    implementation  'com.scwang.smart:refresh-header-radar:2.0.1'       //雷达刷新头
+    implementation  'com.scwang.smart:refresh-header-falsify:2.0.1'     //虚拟刷新头
+    implementation  'com.scwang.smart:refresh-header-material:2.0.1'    //谷歌刷新头
+    implementation  'com.scwang.smart:refresh-header-two-level:2.0.1'   //二级刷新头
+    implementation  'com.scwang.smart:refresh-footer-ball:2.0.1'        //球脉冲加载
+    implementation  'com.scwang.smart:refresh-footer-classics:2.0.1'    //经典加载
+
+
 
 }

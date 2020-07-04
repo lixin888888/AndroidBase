@@ -23,7 +23,6 @@ import okhttp3.OkHttpClient;
 public class HomeFragment extends Fragment {
 
     private RecyclerView recy;
-    private OkHttpClient client = new OkHttpClient();
     private List<shopMain> shopMains = new ArrayList<>();
     public mainAdapter mAdapter;
     private Context mContext;
