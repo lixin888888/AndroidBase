@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 
@@ -156,6 +155,8 @@ public class GoodsItemSquareAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         SearchGoodsQueryParam searchGoodsQueryParam = new SearchGoodsQueryParam();
         searchGoodsQueryParam.setClassify1((short) 2);
         searchGoodsQueryParam.setClassify2((short) 5);
+        searchGoodsQueryParam.setPageNo(0);
+        searchGoodsQueryParam.setPageSize(40);
         Call<CommonResult<CommonPage<com.lixin.xinu.entities.Goods>>> commonPageCommonResult = goodsService.searchGoods(searchGoodsQueryParam);
         commonPageCommonResult.enqueue(new Callback<CommonResult<CommonPage<com.lixin.xinu.entities.Goods>>>() {
             @Override

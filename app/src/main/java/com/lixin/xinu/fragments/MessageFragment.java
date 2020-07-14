@@ -1,6 +1,7 @@
 package com.lixin.xinu.fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
@@ -8,7 +9,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
+import com.lixin.xinu.MainActivity;
+import com.lixin.xinu.activities.SearchActivity;
 import com.lixin.xinu.adapters.GoodsItemSquareAdapter;
 import com.lixin.xinu.interfaces.OnFragmentInteractionListener;
 import com.lixin.xinu.R;
@@ -24,12 +28,13 @@ import com.youth.banner.BannerConfig;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MessageFragment extends Fragment {
+public class MessageFragment extends Fragment implements View.OnClickListener {
 
 
     Banner banner;
     private OnFragmentInteractionListener mListener;
     private RecyclerView mRecyclerView;
+    private LinearLayout searchBar;
     private Context mContext;
 
     public MessageFragment() {
@@ -52,7 +57,8 @@ public class MessageFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.fragment_message, container, false);
-
+        searchBar = view.findViewById(R.id.searchBar);
+        searchBar.setOnClickListener(this);
         // 找到recycleView 注入数据和adapter
         mRecyclerView = view.findViewById(R.id.recyclerview);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(mContext);
@@ -96,5 +102,13 @@ public class MessageFragment extends Fragment {
     }
 
 
-
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.searchBar:
+                Intent intent = new Intent(mContext, SearchActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
 }

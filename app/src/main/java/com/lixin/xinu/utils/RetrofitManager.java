@@ -11,7 +11,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitManager {
 
-    private static final String DEFAULT = "http://192.168.0.222:8080";
+    private static final String DEFAULT = "http://192.168.0.211:8080";
 
     public static OkHttpClient getDefaultClient() {
         return getClient(null);

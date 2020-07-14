@@ -10,7 +10,9 @@ import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.http.Body;
+import retrofit2.http.GET;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface GoodsService {
 
@@ -24,5 +26,10 @@ public interface GoodsService {
      */
     @POST("/goods/searchGoods")
     Call<CommonResult<CommonPage<Goods>>> searchGoods(@Body SearchGoodsQueryParam searchGoodsQueryParam);
+
+    @GET("/search/simple")
+    Call<CommonResult<CommonPage<Goods>>> searchGoodsByEs(@Query("keyword") String keyword,
+                                                          @Query("pageNum") int pageNum,
+                                                          @Query("pageSize") int pageSize);
 
 }

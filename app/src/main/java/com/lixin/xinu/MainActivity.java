@@ -62,10 +62,10 @@ public class MainActivity extends AppCompatActivity  implements OnFragmentIntera
             android.support.v4.app.Fragment fragment = HomeFragment.newInstance();
             switch (tag){
                 case "home":
-                    fragment= HomeFragment.newInstance();
+                    fragment= MessageFragment.newInstance(this.getApplicationContext());
                     break;
                 case "message":
-                    fragment = MessageFragment.newInstance(this.getApplicationContext());
+                    fragment = HomeFragment.newInstance();
                     break;
                 case "cart":
                     fragment = CartFragment.newInstance("q","w");

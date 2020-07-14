@@ -17,5 +17,6 @@ public class ShopActivity extends AppCompatActivity {
         df = Recycle_doubleFragment.newInstance("q","w");
         getSupportFragmentManager().beginTransaction()
                 .add(R.id.shopFragmentContainer,df,"df").commitAllowingStateLoss();
+
     }
 }

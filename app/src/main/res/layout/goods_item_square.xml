@@ -3,24 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_weight="2"
     android:orientation="horizontal"
     android:layout_height="wrap_content">
 
     <LinearLayout
-        android:layout_weight="1"
-        android:layout_marginStart="12dp"
-        android:layout_marginEnd="6dp"
-        android:layout_height="160dp"
+        android:paddingStart="12dp"
+        android:paddingEnd="6dp"
+        android:layout_height="216dp"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:layout_width="0dp">
+        android:layout_width="180dp">
         <ImageView
             android:id="@+id/l_image"
             android:src="@drawable/demo1"
-            android:layout_width="match_parent"
+            android:layout_width="162dp"
             android:scaleType="centerCrop"
-            android:layout_height="112dp">
+            android:layout_height="162dp">
         </ImageView>
         <LinearLayout
             android:orientation="vertical"
@@ -80,19 +78,18 @@
     </LinearLayout>
 
     <LinearLayout
-        android:layout_weight="1"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="12dp"
-        android:layout_height="160dp"
+        android:paddingStart="6dp"
+        android:paddingEnd="12dp"
+        android:layout_height="216dp"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:layout_width="0dp">
+        android:layout_width="180dp">
         <ImageView
             android:id="@+id/r_image"
             android:src="@drawable/demo1"
-            android:layout_width="match_parent"
+            android:layout_width="162dp"
             android:scaleType="centerCrop"
-            android:layout_height="112dp">
+            android:layout_height="162dp">
         </ImageView>
         <LinearLayout
             android:orientation="vertical"

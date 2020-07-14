@@ -1,12 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_marginBottom="60dp"
-    tools:context="com.lixin.xinu.fragments.MessageFragment">
+    tools:context=".activities.SearchActivity">
 
+    <!--搜索框-->
     <LinearLayout
         android:layout_width="match_parent"
         android:background="@color/wangyiyun"
@@ -28,19 +29,26 @@
                 android:layout_marginLeft="16dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@mipmap/explore_search_icon"
-                >
+                android:src="@mipmap/explore_search_icon">
 
             </ImageView>
-            <TextView
+
+            <EditText
+                android:id="@+id/searchInput"
                 android:textColor="@color/myblack"
-                android:text="@string/search_nomal_text"
                 android:layout_marginLeft="16dp"
-                android:layout_width="wrap_content"
+                android:singleLine="true"
+                android:background="@null"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:hint="搜索"
+                android:textSize="16dp"
+                android:layout_width="240dp"
                 android:layout_height="wrap_content">
 
-            </TextView>
+            </EditText>
         </LinearLayout>
+
         <LinearLayout
             android:layout_weight="2"
             android:layout_width="0dp"
@@ -61,12 +69,12 @@
             </TextView>
 
         </LinearLayout>
-    </LinearLayout>
 
+    </LinearLayout>
 
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/refreshLayout"
+        android:id="@+id/search_refreshLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
         <com.scwang.smart.refresh.header.ClassicsHeader
@@ -74,7 +82,7 @@
             android:layout_height="wrap_content"/>
 
         <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerview"
+            android:id="@+id/search_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
         </android.support.v7.widget.RecyclerView>
@@ -84,8 +92,6 @@
             android:layout_height="wrap_content"/>
 
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
-
-
 
 
 </LinearLayout>
