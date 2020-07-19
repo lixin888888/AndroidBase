@@ -2,6 +2,7 @@ package com.lixin.xinu.netServices;
 
 
 import com.lixin.xinu.dto.SearchGoodsQueryParam;
+import com.lixin.xinu.dto.SearchRecommandParam;
 import com.lixin.xinu.entities.CommonPage;
 import com.lixin.xinu.entities.CommonResult;
 import com.lixin.xinu.entities.Goods;
@@ -24,11 +25,15 @@ public interface GoodsService {
     /**
      * 查询goods 分类
      */
-    @POST("/goods/searchGoods")
-    Call<CommonResult<CommonPage<Goods>>> searchGoods(@Body SearchGoodsQueryParam searchGoodsQueryParam);
+    @GET("product/list")
+    Call<CommonResult<CommonPage<Goods>>> searchGoods(
+            @Query("publishStatus") Integer publishStatus,
+            @Query("pageNum") int pageNum,
+            @Query("pageSize") int pageSize
+    );
 
-    @GET("/search/simple")
-    Call<CommonResult<CommonPage<Goods>>> searchGoodsByEs(@Query("keyword") String keyword,
+    @GET("product/list")
+    CommonResult<CommonPage<Goods>> searchGoodsByEs(      @Query("keyword") String keyword,
                                                           @Query("pageNum") int pageNum,
                                                           @Query("pageSize") int pageSize);
 

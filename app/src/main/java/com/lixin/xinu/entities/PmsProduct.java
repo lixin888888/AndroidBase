@@ -2,13 +2,12 @@ package com.lixin.xinu.entities;
 
 import com.lixin.xinu.utils.ApiModelProperty;
 
-import java.io.Serializable;
 import java.math.BigDecimal;
 import java.util.Date;
 
-public class Goods implements Serializable {
+public class PmsProduct {
 
-    private Integer id;
+    private Long id;
 
     private Long brandId;
 
@@ -124,12 +123,11 @@ public class Goods implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

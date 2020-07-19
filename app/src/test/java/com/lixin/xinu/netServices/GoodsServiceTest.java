@@ -30,10 +30,8 @@ public class GoodsServiceTest {
     public void searchGoods() throws InterruptedException {
 
         GoodsService goodsService = RetrofitManager.createService(GoodsService.class);
-        SearchGoodsQueryParam searchGoodsQueryParam = new SearchGoodsQueryParam();
-        searchGoodsQueryParam.setClassify1((short) 2);
-        searchGoodsQueryParam.setClassify2((short) 5);
-        Call<CommonResult<CommonPage<Goods>>> commonPageCommonResult = goodsService.searchGoods(searchGoodsQueryParam);
+
+        Call<CommonResult<CommonPage<Goods>>> commonPageCommonResult = goodsService.searchGoods(1,1,10);
         final CountDownLatch countDownLatch = new CountDownLatch(1);
         commonPageCommonResult.enqueue(new Callback<CommonResult<CommonPage<Goods>>>() {
             @Override

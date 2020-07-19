@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.lixin.xinu.R;
 import com.lixin.xinu.dto.SearchGoodsQueryParam;
+import com.lixin.xinu.dto.SearchRecommandParam;
 import com.lixin.xinu.entities.CommonPage;
 import com.lixin.xinu.entities.CommonResult;
 import com.lixin.xinu.entities.Goods;
@@ -90,12 +91,12 @@ public class GoodsItemSquareAdapter extends RecyclerView.Adapter<RecyclerView.Vi
             Glide.with(mContext).load(r_goods.getPic()).into(gsh.r_image);
             gsh.l_name.setText(l_goods.getName().substring(0,6));
             gsh.r_name.setText(r_goods.getName().substring(0,6));
-            gsh.l_price.setText(String.valueOf(l_goods.getPrice().toString()));
-            gsh.r_price.setText(String.valueOf(r_goods.getPrice().toString()));
-            gsh.l_origin_price.setText(String.valueOf(l_goods.getOriginalPrice().toString()));
-            gsh.r_origin_price.setText(String.valueOf(r_goods.getOriginalPrice().toString()));
-            gsh.l_sale.setText(String.valueOf(l_goods.getSale().toString()));
-            gsh.r_sale.setText(String.valueOf(l_goods.getSale().toString()));
+            gsh.l_price.setText(l_goods.getPrice().toString());
+            gsh.r_price.setText(r_goods.getPrice().toString());
+            gsh.l_origin_price.setText(l_goods.getOriginalPrice().toString());
+            gsh.r_origin_price.setText(r_goods.getOriginalPrice().toString());
+            gsh.l_sale.setText(l_goods.getSale().toString());
+            gsh.r_sale.setText(l_goods.getSale().toString());
         }else if (viewHolder instanceof BannerHolder){
             //设置banner样式
             Banner banner = ((BannerHolder) viewHolder).banner;
@@ -152,12 +153,9 @@ public class GoodsItemSquareAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
    // 获取网络数据进行加载
     public void getGoodsList(RefreshLayout refreshlayout){
-        SearchGoodsQueryParam searchGoodsQueryParam = new SearchGoodsQueryParam();
-        searchGoodsQueryParam.setClassify1((short) 2);
-        searchGoodsQueryParam.setClassify2((short) 5);
-        searchGoodsQueryParam.setPageNo(0);
-        searchGoodsQueryParam.setPageSize(40);
-        Call<CommonResult<CommonPage<com.lixin.xinu.entities.Goods>>> commonPageCommonResult = goodsService.searchGoods(searchGoodsQueryParam);
+        Call<CommonResult<CommonPage<com.lixin.xinu.entities.Goods>>> commonPageCommonResult =
+                goodsService.searchGoods(1,1,10);
+
         commonPageCommonResult.enqueue(new Callback<CommonResult<CommonPage<com.lixin.xinu.entities.Goods>>>() {
             @Override
             public void onResponse(Call<CommonResult<CommonPage<com.lixin.xinu.entities.Goods>>> call,

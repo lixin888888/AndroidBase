@@ -13,6 +13,8 @@ public class RetrofitManager {
 
     private static final String DEFAULT = "http://192.168.0.211:8080";
 
+    private static final String LOCAL = "http://192.168.0.222:8080";
+
     public static OkHttpClient getDefaultClient() {
         return getClient(null);
     }
@@ -28,7 +30,7 @@ public class RetrofitManager {
     }
 
     public static Retrofit getRetrofit() {
-        return getRetrofit(DEFAULT);
+        return getRetrofit(LOCAL);
     }
 
     public static Retrofit getRetrofit(String url) {
@@ -36,7 +38,7 @@ public class RetrofitManager {
     }
 
     public static Retrofit getRetrofit(OkHttpClient client) {
-        return getRetrofit(DEFAULT, client);
+        return getRetrofit(LOCAL, client);
     }
 
     public static Retrofit getRetrofit(String url, OkHttpClient client) {
@@ -54,7 +56,7 @@ public class RetrofitManager {
         }
         // TODO: 16/7/14
         if (null == url || url.length() == 0) {
-            builder.baseUrl(DEFAULT);
+            builder.baseUrl(LOCAL);
         } else {
             builder.baseUrl(url);
         }
