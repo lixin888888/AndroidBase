@@ -91,6 +91,7 @@
             android:scaleType="centerCrop"
             android:layout_height="162dp">
         </ImageView>
+
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
@@ -102,6 +103,7 @@
                 android:layout_height="wrap_content"
                 android:layout_width="match_parent">
             </TextView>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:orientation="horizontal"

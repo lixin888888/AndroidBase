@@ -7,146 +7,167 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="80dp">
-
+        <!--  店铺图片       -->
         <ImageView
-            android:layout_width="72dp"
-            android:layout_marginRight="12dp"
-            android:layout_height="72dp" />
+            android:id="@+id/search_shop_id"
+            android:layout_width="68dp"
+            android:layout_margin="3dp"
+            android:layout_height="68dp" />
 
         <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="300dp"
-            android:layout_height="80dp">
+            android:layout_width="272dp"
+            android:layout_height="84dp"
+            android:orientation="vertical">
             <!--   店铺名字         -->
             <TextView
-                android:text="贡茶(房山店)"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:text="贡茶(房山店)" />
             <!--     评分 销量 配送大致时间 距离       -->
             <RelativeLayout
-                android:layout_below="@+id/shopTitle"
                 android:layout_width="match_parent"
-                android:layout_height="16dp">
+                android:layout_height="16dp"
+                android:layout_below="@+id/shopTitle">
+
                 <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="20dp"
-                    android:orientation="horizontal"
-                    android:gravity="center_vertical"
                     android:layout_alignParentLeft="true"
-                    android:layout_width="match_parent">
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
                     <ImageView
                         android:layout_width="18dp"
-                        android:src="@drawable/ic_hotgoods"
-                        android:layout_height="18dp" />
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_hotgoods" />
                     <!--                评分-->
                     <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:text="4.6"
-                        android:textSize="14sp"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                    </TextView>
-<!--        销量            -->
+                        android:textSize="14sp" />
+                    <!--        销量            -->
                     <TextView
-                        android:layout_width="wrap_content"
-                        android:text="月售 620"
                         android:id="@+id/salesCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="16dp"
                         android:layout_marginLeft="12dp"
-                        android:textSize="12sp"
-                        android:layout_height="16dp" />
+                        android:text="月售 620"
+                        android:textSize="12sp" />
                 </LinearLayout>
-<!--        时长 距离        -->
+                <!--        时长 距离        -->
                 <TextView
                     android:id="@+id/costTime"
-                    android:text="30分钟 1.9km"
-                    android:layout_alignParentRight="true"
-                    android:textSize="12sp"
                     android:layout_width="wrap_content"
-                    android:layout_height="16dp" />
+                    android:layout_height="16dp"
+                    android:layout_alignParentRight="true"
+                    android:text="30分钟 1.9km"
+                    android:textSize="12sp" />
 
             </RelativeLayout>
+
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="20dp">
+
                 <TextView
-                    android:layout_alignParentLeft="true"
-                    android:textSize="12sp"
-                    android:gravity="center_vertical"
                     android:id="@+id/sendLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:layout_alignParentLeft="true"
+                    android:gravity="center_vertical"
                     android:text="起送20  配送5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="20dp" />
+                    android:textSize="12sp" />
+
                 <ImageView
-                    android:layout_alignParentRight="true"
-                    android:src="@mipmap/kuaiyu"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp" />
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@mipmap/kuaiyu" />
             </RelativeLayout>
-<!--                优惠券-->
+            <!--                优惠券-->
             <LinearLayout
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="20dp">
+                android:layout_height="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
                 <ImageView
                     android:layout_width="20dp"
-                    android:src="@drawable/ic_youhui"
-                    android:layout_height="20dp" />
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_youhui" />
+
                 <TextView
                     android:id="@+id/youhui1"
                     android:layout_width="wrap_content"
-                    android:text="55减5"
-                    android:textColor="#fb4e44"
-                    android:padding="2dp"
-                    android:textSize="12sp"
+                    android:layout_height="20dp"
                     android:layout_marginLeft="4dp"
                     android:background="@drawable/textview_youhui"
-                    android:layout_height="20dp" />
+                    android:padding="2dp"
+                    android:text="55减5"
+                    android:textColor="#fb4e44"
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/youhui2"
                     android:layout_width="wrap_content"
-                    android:text="100减10"
-                    android:textColor="#fb4e44"
-                    android:padding="2dp"
-                    android:textSize="12sp"
+                    android:layout_height="20dp"
                     android:layout_marginLeft="4dp"
                     android:background="@drawable/textview_youhui"
-                    android:layout_height="20dp" />
+                    android:padding="2dp"
+                    android:text="100减10"
+                    android:textColor="#fb4e44"
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/youhui3"
                     android:layout_width="wrap_content"
-                    android:text="55减5"
-                    android:textColor="#fb4e44"
-                    android:padding="2dp"
-                    android:textSize="12sp"
+                    android:layout_height="20dp"
                     android:layout_marginLeft="4dp"
                     android:background="@drawable/textview_youhui"
-                    android:layout_height="20dp" />
+                    android:padding="2dp"
+                    android:text="55减5"
+                    android:textColor="#fb4e44"
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/youhui4"
                     android:layout_width="wrap_content"
-                    android:text="100减10"
-                    android:textColor="#fb4e44"
-                    android:padding="2dp"
-                    android:textSize="12sp"
+                    android:layout_height="20dp"
                     android:layout_marginLeft="4dp"
                     android:background="@drawable/textview_youhui"
-                    android:layout_height="20dp" />
+                    android:padding="2dp"
+                    android:text="100减10"
+                    android:textColor="#fb4e44"
+                    android:textSize="12sp" />
+
                 <TextView
                     android:id="@+id/youhui5"
                     android:layout_width="wrap_content"
-                    android:text="55减5"
-                    android:textColor="#fb4e44"
-                    android:padding="2dp"
-                    android:textSize="12sp"
+                    android:layout_height="20dp"
                     android:layout_marginLeft="4dp"
                     android:background="@drawable/textview_youhui"
-                    android:layout_height="20dp" />
+                    android:padding="2dp"
+                    android:text="55减5"
+                    android:textColor="#fb4e44"
+                    android:textSize="12sp" />
 
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-    <android.support.v7.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="80dp">
 
-    </android.support.v7.widget.RecyclerView>
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <include layout="@layout/goods_search_scrollview_layout"/>
+            <include layout="@layout/goods_search_scrollview_layout"/>
+            <include layout="@layout/goods_search_scrollview_layout"/>
+            <include layout="@layout/goods_search_scrollview_layout"/>
+
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>
