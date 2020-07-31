@@ -1,9 +1,9 @@
-set(CMAKE_HOST_SYSTEM "Darwin-18.7.0")
+set(CMAKE_HOST_SYSTEM "Darwin-17.7.0")
 set(CMAKE_HOST_SYSTEM_NAME "Darwin")
-set(CMAKE_HOST_SYSTEM_VERSION "18.7.0")
+set(CMAKE_HOST_SYSTEM_VERSION "17.7.0")
 set(CMAKE_HOST_SYSTEM_PROCESSOR "x86_64")
 
-include("/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake")
+include("/Users/yons/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake")
 
 set(CMAKE_SYSTEM "Android-1")
 set(CMAKE_SYSTEM_NAME "Android")

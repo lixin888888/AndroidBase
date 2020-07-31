@@ -5,9 +5,9 @@
     "environmentVariables": []
   },
   "cmake": {
-    "cmakeArtifactsBaseFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/x86_64",
-    "cmakeServerLogFile": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/x86_64/cmake_server_log.txt",
-    "cmakeWrappingBaseFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cxx/release/x86_64",
+    "cmakeArtifactsBaseFolder": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/x86_64",
+    "cmakeServerLogFile": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/x86_64/cmake_server_log.txt",
+    "cmakeWrappingBaseFolder": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cxx/release/x86_64",
     "effectiveConfiguration": {
       "name": "traditional-android-studio-cmake-environment",
       "description": "Composite reified CMakeSettings configuration",
@@ -15,13 +15,13 @@
       "inheritEnvironments": [
         "ndk"
       ],
-      "buildRoot": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/x86_64",
-      "cmakeToolchain": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake",
-      "cmakeExecutable": "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake",
+      "buildRoot": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/x86_64",
+      "cmakeToolchain": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake",
+      "cmakeExecutable": "/Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake",
       "variables": [
         {
           "name": "CMAKE_FIND_ROOT_PATH",
-          "value": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/prefab/x86_64/prefab"
+          "value": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/prefab/x86_64/prefab"
         },
         {
           "name": "CMAKE_BUILD_TYPE",
@@ -29,7 +29,7 @@
         },
         {
           "name": "CMAKE_TOOLCHAIN_FILE",
-          "value": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake"
+          "value": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake"
         },
         {
           "name": "ANDROID_ABI",
@@ -37,7 +37,7 @@
         },
         {
           "name": "ANDROID_NDK",
-          "value": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147"
+          "value": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147"
         },
         {
           "name": "ANDROID_PLATFORM",
@@ -49,7 +49,7 @@
         },
         {
           "name": "CMAKE_ANDROID_NDK",
-          "value": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147"
+          "value": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147"
         },
         {
           "name": "CMAKE_EXPORT_COMPILE_COMMANDS",
@@ -57,11 +57,11 @@
         },
         {
           "name": "CMAKE_LIBRARY_OUTPUT_DIRECTORY",
-          "value": "/Users/lixin/javaWeb/app/AndroidBase/app/build/intermediates/cmake/release/obj/x86_64"
+          "value": "/Users/yons/Documents/App/AndroidBase/app/build/intermediates/cmake/release/obj/x86_64"
         },
         {
           "name": "CMAKE_MAKE_PROGRAM",
-          "value": "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja"
+          "value": "/Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja"
         },
         {
           "name": "CMAKE_SYSTEM_NAME",
@@ -74,14 +74,14 @@
       ]
     }
   },
-  "cxxBuildFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/x86_64",
+  "cxxBuildFolder": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/x86_64",
   "info": {
     "abi": "X86_64",
     "bitness": 64,
     "deprecated": false,
     "default": true
   },
-  "originalCxxBuildFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/x86_64",
+  "originalCxxBuildFolder": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/x86_64",
   "variant": {
     "buildSystemArgumentList": [],
     "buildTargetSet": [],
@@ -94,24 +94,24 @@
     "module": {
       "buildSystem": "CMAKE",
       "cmake": {
-        "cmakeExe": "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake",
+        "cmakeExe": "/Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake",
         "minimumCmakeVersion": "3.10.2",
-        "ninjaExe": "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja"
+        "ninjaExe": "/Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja"
       },
-      "cmakeToolchainFile": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake",
-      "cxxFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx",
+      "cmakeToolchainFile": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake",
+      "cxxFolder": "/Users/yons/Documents/App/AndroidBase/app/.cxx",
       "gradleModulePathName": ":app",
-      "intermediatesFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/build/intermediates",
-      "makeFile": "/Users/lixin/javaWeb/app/AndroidBase/app/CMakeLists.txt",
-      "moduleBuildFile": "/Users/lixin/javaWeb/app/AndroidBase/app/build.gradle",
-      "moduleRootFolder": "/Users/lixin/javaWeb/app/AndroidBase/app",
+      "intermediatesFolder": "/Users/yons/Documents/App/AndroidBase/app/build/intermediates",
+      "makeFile": "/Users/yons/Documents/App/AndroidBase/app/CMakeLists.txt",
+      "moduleBuildFile": "/Users/yons/Documents/App/AndroidBase/app/build.gradle",
+      "moduleRootFolder": "/Users/yons/Documents/App/AndroidBase/app",
       "ndkDefaultAbiList": [
         "ARMEABI_V7A",
         "ARM64_V8A",
         "X86",
         "X86_64"
       ],
-      "ndkFolder": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147",
+      "ndkFolder": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147",
       "ndkMetaAbiList": [
         {
           "abi": "ARMEABI_V7A",
@@ -169,29 +169,29 @@
       "ndkDefaultStl": "LIBCXX_STATIC",
       "ndkVersion": "21.3.6528147",
       "project": {
-        "compilerSettingsCacheFolder": "/Users/lixin/javaWeb/app/AndroidBase/.cxx",
-        "cxxFolder": "/Users/lixin/javaWeb/app/AndroidBase/.cxx",
+        "compilerSettingsCacheFolder": "/Users/yons/Documents/App/AndroidBase/.cxx",
+        "cxxFolder": "/Users/yons/Documents/App/AndroidBase/.cxx",
         "isBuildOnlyTargetAbiEnabled": true,
         "isCmakeBuildCohabitationEnabled": false,
         "isNativeCompilerSettingsCacheEnabled": false,
-        "rootBuildGradleFolder": "/Users/lixin/javaWeb/app/AndroidBase",
-        "sdkFolder": "/Users/lixin/Library/Android/sdk",
+        "rootBuildGradleFolder": "/Users/yons/Documents/App/AndroidBase",
+        "sdkFolder": "/Users/yons/Library/Android/sdk",
         "isPrefabEnabled": false
       },
       "splitsAbiFilterSet": [],
       "stlSharedObjectMap": {
         "LIBCXX_SHARED": {
-          "ARMEABI_V7A": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so",
-          "ARM64_V8A": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
-          "X86": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/libc++_shared.so",
-          "X86_64": "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/libc++_shared.so"
+          "ARMEABI_V7A": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/arm-linux-androideabi/libc++_shared.so",
+          "ARM64_V8A": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/aarch64-linux-android/libc++_shared.so",
+          "X86": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/i686-linux-android/libc++_shared.so",
+          "X86_64": "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/toolchains/llvm/prebuilt/darwin-x86_64/sysroot/usr/lib/x86_64-linux-android/libc++_shared.so"
         },
         "LIBCXX_STATIC": {},
         "NONE": {},
         "SYSTEM": {}
       }
     },
-    "objFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/build/intermediates/cmake/release/obj",
+    "objFolder": "/Users/yons/Documents/App/AndroidBase/app/build/intermediates/cmake/release/obj",
     "variantName": "release",
     "validAbiList": [
       "ARMEABI_V7A",
@@ -199,8 +199,8 @@
       "X86",
       "X86_64"
     ],
-    "prefabDirectory": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/prefab",
+    "prefabDirectory": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/prefab",
     "prefabPackageDirectoryList": []
   },
-  "prefabFolder": "/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/prefab/x86_64"
+  "prefabFolder": "/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/prefab/x86_64"
 }

@@ -1,20 +1,20 @@
-Executable : /Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake
+Executable : /Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/cmake
 arguments : 
--H/Users/lixin/javaWeb/app/AndroidBase/app
--DCMAKE_FIND_ROOT_PATH=/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/prefab/x86_64/prefab
+-H/Users/yons/Documents/App/AndroidBase/app
+-DCMAKE_FIND_ROOT_PATH=/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/prefab/x86_64/prefab
 -DCMAKE_BUILD_TYPE=Release
--DCMAKE_TOOLCHAIN_FILE=/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake
+-DCMAKE_TOOLCHAIN_FILE=/Users/yons/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake
 -DANDROID_ABI=x86_64
--DANDROID_NDK=/Users/lixin/Library/Android/sdk/ndk/21.3.6528147
+-DANDROID_NDK=/Users/yons/Library/Android/sdk/ndk/21.3.6528147
 -DANDROID_PLATFORM=android-21
 -DCMAKE_ANDROID_ARCH_ABI=x86_64
--DCMAKE_ANDROID_NDK=/Users/lixin/Library/Android/sdk/ndk/21.3.6528147
+-DCMAKE_ANDROID_NDK=/Users/yons/Library/Android/sdk/ndk/21.3.6528147
 -DCMAKE_EXPORT_COMPILE_COMMANDS=ON
--DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/lixin/javaWeb/app/AndroidBase/app/build/intermediates/cmake/release/obj/x86_64
--DCMAKE_MAKE_PROGRAM=/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/yons/Documents/App/AndroidBase/app/build/intermediates/cmake/release/obj/x86_64
+-DCMAKE_MAKE_PROGRAM=/Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja
 -DCMAKE_SYSTEM_NAME=Android
 -DCMAKE_SYSTEM_VERSION=21
--B/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/release/x86_64
+-B/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/release/x86_64
 -GNinja
 jvmArgs : 
 

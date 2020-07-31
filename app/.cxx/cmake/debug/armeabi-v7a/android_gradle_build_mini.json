@@ -1,12 +1,12 @@
 {
   "buildFiles": [
-    "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/platforms.cmake",
-    "/Users/lixin/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake",
-    "/Users/lixin/javaWeb/app/AndroidBase/app/CMakeLists.txt"
+    "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/build/cmake/platforms.cmake",
+    "/Users/yons/Documents/App/AndroidBase/app/CMakeLists.txt",
+    "/Users/yons/Library/Android/sdk/ndk/21.3.6528147/build/cmake/android.toolchain.cmake"
   ],
   "cleanCommands": [
-    "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/debug/armeabi-v7a\" clean"
+    "/Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja -C \"/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/debug/armeabi-v7a\" clean"
   ],
-  "buildTargetsCommand": "/Users/lixin/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/lixin/javaWeb/app/AndroidBase/app/.cxx/cmake/debug/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
+  "buildTargetsCommand": "/Users/yons/Library/Android/sdk/cmake/3.10.2.4988404/bin/ninja  -C \"/Users/yons/Documents/App/AndroidBase/app/.cxx/cmake/debug/armeabi-v7a\" {LIST_OF_TARGETS_TO_BUILD}",
   "libraries": {}
 }

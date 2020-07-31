@@ -13,10 +13,10 @@ public class RetrofitManager {
 
     private static final String DEFAULT = "http://192.168.0.211:8080";
 
-    private static final String LOCAL = "http://192.168.0.222:8080";
+    private static final String LOCAL = "http://192.168.1.110:8080";
 
     public static OkHttpClient getDefaultClient() {
-        return getClient(null);
+        return getClient((Interceptor[]) null);
     }
 
     public static OkHttpClient getClient(Interceptor... interceptor) {
