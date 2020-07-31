@@ -32,10 +32,11 @@ public class SearchActivity extends AppCompatActivity {
         setContentView(R.layout.activity_search);
         initImmersionBar();
 
-        /*mRecyclerView = findViewById(R.id.search_recyclerview);
+        mRecyclerView = findViewById(R.id.search_recyclerview);
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mRecyclerView.setLayoutManager(linearLayoutManager);
+
         GoodsItemSquareAdapter goodsItemSquareAdapter = new GoodsItemSquareAdapter(this);
         mRecyclerView.setAdapter(goodsItemSquareAdapter);
 
@@ -52,7 +53,7 @@ public class SearchActivity extends AppCompatActivity {
         refreshLayout.setOnRefreshListener(new OnRefreshListener() {
             @Override
             public void onRefresh(RefreshLayout refreshlayout) {
-                refreshlayout.finishRefresh(2000*//*,false*//*);//传入false表示刷新失败
+                refreshlayout.finishRefresh(2000);//传入false表示刷新失败
             }
         });
         refreshLayout.setOnLoadMoreListener(new OnLoadMoreListener() {
@@ -60,7 +61,7 @@ public class SearchActivity extends AppCompatActivity {
             public void onLoadMore(RefreshLayout refreshlayout) {
                 goodsItemSquareAdapter.getGoodsList(refreshlayout);
             }
-        });*/
+        });
     }
 
 

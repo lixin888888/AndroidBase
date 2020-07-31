@@ -9,7 +9,7 @@
         android:layout_height="80dp">
         <!--  店铺图片       -->
         <ImageView
-            android:id="@+id/search_shop_id"
+            android:id="@+id/search_shop_image"
             android:layout_width="68dp"
             android:layout_margin="3dp"
             android:layout_height="68dp" />
@@ -20,6 +20,7 @@
             android:orientation="vertical">
             <!--   店铺名字         -->
             <TextView
+                android:id="@+id/search_shop_name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="贡茶(房山店)" />
@@ -42,13 +43,14 @@
                         android:src="@drawable/ic_hotgoods" />
                     <!--                评分-->
                     <TextView
+                        android:id="@+id/search_shop_score"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="4.6"
                         android:textSize="14sp" />
                     <!--        销量            -->
                     <TextView
-                        android:id="@+id/salesCount"
+                        android:id="@+id/search_shop_salesCount"
                         android:layout_width="wrap_content"
                         android:layout_height="16dp"
                         android:layout_marginLeft="12dp"
@@ -57,7 +59,7 @@
                 </LinearLayout>
                 <!--        时长 距离        -->
                 <TextView
-                    android:id="@+id/costTime"
+                    android:id="@+id/search_shop_costTime"
                     android:layout_width="wrap_content"
                     android:layout_height="16dp"
                     android:layout_alignParentRight="true"
@@ -71,7 +73,7 @@
                 android:layout_height="20dp">
 
                 <TextView
-                    android:id="@+id/sendLevel"
+                    android:id="@+id/search_shop_sendLevel"
                     android:layout_width="wrap_content"
                     android:layout_height="20dp"
                     android:layout_alignParentLeft="true"
@@ -160,6 +162,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp">
         <LinearLayout
+            android:id="@+id/search_shop_goodsList"
             android:layout_width="wrap_content"
             android:gravity="center_vertical"
             android:layout_height="match_parent">

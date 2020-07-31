@@ -71,7 +71,7 @@ public class GoodsItemSquareAdapter extends RecyclerView.Adapter<RecyclerView.Vi
     public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int viewType) {
 
         if (viewType == TYPE_1){
-            View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.banner_item, viewGroup, false);
+            View view = inflater.inflate(R.layout.banner_item, viewGroup, false);
             BannerHolder bannerHolder = new BannerHolder((view));
             return bannerHolder;
         }
