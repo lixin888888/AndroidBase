@@ -91,5 +91,7 @@ dependencies {
     implementation 'me.jessyan:autosize:1.2.1'
     // 下拉菜单
     implementation 'com.github.dongjunkun:DropDownMenu:1.0.4'
+    // seekbar
+    implementation 'com.xw.repo:bubbleseekbar:3.20-lite'
 
 }

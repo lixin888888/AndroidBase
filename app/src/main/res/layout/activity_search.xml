@@ -72,27 +72,41 @@
 
     </LinearLayout>
 
-<!--    筛选器-->
-    <com.yyydjk.library.DropDownMenu
-        android:id="@+id/dropDownMenu"
+
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:ddmenuTextSize="13sp"
-        app:ddtextUnselectedColor="@color/drop_down_unselected"
-        app:ddtextSelectedColor="@color/drop_down_selected"
-        app:dddividerColor="@color/gray"
-        app:ddunderlineColor="@color/gray"
-        app:ddmenuSelectedIcon="@mipmap/drop_down_selected_icon"
-        app:ddmenuUnselectedIcon="@mipmap/drop_down_unselected_icon"
-        app:ddmaskColor="@color/mask_color"
-        app:ddmenuBackgroundColor="@color/white"
-        app:ddmenuMenuHeightPercent="0.5"
-    />
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="40dp">
+        <com.lixin.xinu.customerView.FilterLayout
+            android:layout_width="90dp"
+            android:id="@+id/s_sell"
+            android:layout_height="wrap_content"
+            app:filter_text="销量"/>
+        <com.lixin.xinu.customerView.FilterLayout
+            android:layout_width="90dp"
+            android:id="@+id/s_price"
+            android:layout_height="wrap_content"
+            app:filter_text="价格"/>
+        <com.lixin.xinu.customerView.FilterLayout
+            android:layout_width="90dp"
+            android:id="@+id/s_distance"
+            android:layout_height="wrap_content"
+            app:filter_text="时间"/>
+        <com.lixin.xinu.customerView.FilterLayout
+            android:layout_width="90dp"
+            android:id="@+id/s_all"
+            android:layout_height="wrap_content"
+            app:filter_text="综合"/>
+    </LinearLayout>
+
+
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/search_refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <com.scwang.smart.refresh.header.ClassicsHeader
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
