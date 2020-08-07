@@ -3,30 +3,24 @@ package com.lixin.xinu.fragments;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
 
-import com.lixin.xinu.MainActivity;
 import com.lixin.xinu.activities.SearchActivity;
 import com.lixin.xinu.adapters.GoodsItemSquareAdapter;
 import com.lixin.xinu.interfaces.OnFragmentInteractionListener;
 import com.lixin.xinu.R;
-import com.lixin.xinu.utils.GlideImageLoader;
 import com.scwang.smart.refresh.footer.ClassicsFooter;
 import com.scwang.smart.refresh.header.ClassicsHeader;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.scwang.smart.refresh.layout.listener.OnLoadMoreListener;
 import com.scwang.smart.refresh.layout.listener.OnRefreshListener;
 import com.youth.banner.Banner;
-import com.youth.banner.BannerConfig;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MessageFragment extends Fragment implements View.OnClickListener {
 

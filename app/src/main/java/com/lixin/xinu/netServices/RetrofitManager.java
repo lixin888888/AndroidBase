@@ -1,4 +1,4 @@
-package com.lixin.xinu.utils;
+package com.lixin.xinu.netServices;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -63,7 +63,7 @@ public class RetrofitManager {
         return builder.build();
     }
 
-    public static <T> T createService(Class<T> serviceClass) {
-        return getRetrofit().create(serviceClass);
+    public static <T> T createService(Class<T> serviceClass,NetServicePrefixAddress prefixAddress) {
+        return getRetrofit(prefixAddress.getUrl()).create(serviceClass);
     }
 }

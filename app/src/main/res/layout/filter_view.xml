@@ -1,19 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:gravity="center"
-    android:orientation="horizontal"
     android:layout_height="match_parent">
 
-    <TextView
-        android:text="筛选条件"
-        android:id="@+id/filter_text"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp">
-    </TextView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_height="match_parent">
 
-    <ImageView
-        android:src="@mipmap/drop_down_unselected_icon"
-        android:layout_width="20dp"
-        android:layout_height="20dp"/>
+        <TextView
+            android:text="筛选条件"
+            android:gravity="center_vertical"
+            android:includeFontPadding="false"
+            android:id="@+id/filter_text"
+            android:textColor="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp">
+        </TextView>
+
+        <ImageView
+            android:src="@drawable/ic_order_liner_up"
+            android:layout_width="16dp"
+            android:layout_height="10dp"/>
+
+    </LinearLayout>
+
 </LinearLayout>
+

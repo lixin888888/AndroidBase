@@ -1,13 +1,13 @@
 package com.lixin.xinu.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.lixin.xinu.dto.SearchShopRes;
+import com.lixin.xinu.dto.EsGoods;
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class SearchShopItemAdapter extends RecyclerView.Adapter<SearchShopItemAd
 
     LayoutInflater inflater;
 
-    List<SearchShopRes> datas;
+    List<EsGoods> datas;
 
     @NonNull
     @Override

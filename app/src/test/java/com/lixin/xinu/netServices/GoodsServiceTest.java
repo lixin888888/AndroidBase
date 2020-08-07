@@ -1,24 +1,19 @@
 package com.lixin.xinu.netServices;
 
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.lixin.xinu.dto.SearchGoodsQueryParam;
+import com.lixin.xinu.R;
+import com.lixin.xinu.dto.SearchGoodsReq;
+import com.lixin.xinu.dto.EsGoods;
 import com.lixin.xinu.entities.CommonPage;
 import com.lixin.xinu.entities.CommonResult;
 import com.lixin.xinu.entities.Goods;
-import com.lixin.xinu.utils.RetrofitManager;
 
 import org.junit.Test;
 
-import java.util.List;
 import java.util.concurrent.CountDownLatch;
 
-import okhttp3.OkHttpClient;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-import retrofit2.Retrofit;
-import retrofit2.converter.gson.GsonConverterFactory;
 
 public class GoodsServiceTest {
 
@@ -29,7 +24,7 @@ public class GoodsServiceTest {
     @Test
     public void searchGoods() throws InterruptedException {
 
-        GoodsService goodsService = RetrofitManager.createService(GoodsService.class);
+        GoodsService goodsService = RetrofitManager.createService(GoodsService.class,NetServicePrefixAddress.ADMIN);
 
         Call<CommonResult<CommonPage<Goods>>> commonPageCommonResult = goodsService.searchGoods(1,1,10);
         final CountDownLatch countDownLatch = new CountDownLatch(1);
@@ -43,6 +38,28 @@ public class GoodsServiceTest {
             @Override
             public void onFailure(Call<CommonResult<CommonPage<Goods>>> call, Throwable t) {
                 System.out.println(t.getCause());
+                countDownLatch.countDown();
+            }
+        });
+        countDownLatch.await();
+    }
+
+    @Test
+    public void searchGoodsES() throws InterruptedException {
+        SearchGoodsReq req = new SearchGoodsReq();
+        req.setKeyword("小米");
+        GoodsService goodsService = RetrofitManager.createService(GoodsService.class,NetServicePrefixAddress.ES);
+        Call<CommonResult<CommonPage<EsGoods>>> goodsByEs = goodsService.searchGoodsByES(req.getBrandId(), req.getKeyword(), req.getProductCategoryId(), req.getSort(), req.getPageNum(), req.getPageSize());
+        final CountDownLatch countDownLatch = new CountDownLatch(1);
+        goodsByEs.enqueue(new Callback<CommonResult<CommonPage<EsGoods>>>() {
+            @Override
+            public void onResponse(Call<CommonResult<CommonPage<EsGoods>>> call, Response<CommonResult<CommonPage<EsGoods>>> response) {
+                System.out.println(response.body());
+                countDownLatch.countDown();
+            }
+
+            @Override
+            public void onFailure(Call<CommonResult<CommonPage<EsGoods>>> call, Throwable t) {
                 countDownLatch.countDown();
             }
         });

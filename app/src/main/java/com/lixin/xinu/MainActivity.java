@@ -3,9 +3,9 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -23,7 +23,7 @@ import com.lixin.xinu.beans.TellMainWhat;
 import com.lixin.xinu.testEventBus.TestEventbusActivity;
 
 public class MainActivity extends AppCompatActivity  implements OnFragmentInteractionListener, TellMainWhat {
-    private android.support.v4.app.Fragment CurrentFragment;
+    private Fragment CurrentFragment;
     private LinearLayout tabbarContainer;
     private String lastflag="";
     private FragmentManager fm = getSupportFragmentManager();
@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity  implements OnFragmentIntera
                 CurrentFragment = object;
             }
         }else {
-            android.support.v4.app.Fragment fragment = HomeFragment.newInstance();
+            Fragment fragment = HomeFragment.newInstance();
             switch (tag){
                 case "home":
                     fragment= MessageFragment.newInstance(this.getApplicationContext());

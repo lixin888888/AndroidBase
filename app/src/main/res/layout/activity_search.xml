@@ -1,127 +1,135 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?><!--协调者布局-->
+<!--详见 https://www.jianshu.com/p/eec5a397ce79-->
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:id="@+id/root_container_layout"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:fitsSystemWindows="false"
     tools:context=".activities.SearchActivity">
-
-    <!--搜索框-->
-    <LinearLayout
+<!--fitsSystemWindows属性的使用，要想生效必须与透明状态栏或透明底部导航栏一起使用方可生效。
+fitsSystemWindows = true时，会使我们的布局或View预留出系统状态栏底部导航栏空间，即给View自动添加上padding值，
+这时候我们给View设置的padding属性则无效
+-->
+<!--    fitsSystemWindows = false时，我们的布局会占据整个系统窗口，不会给状态栏、底部导航栏预留空间，
+当然前提是：必须设置透明状态栏或透明底部导航栏，这样方可生效-->
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:background="@color/wangyiyun"
-        android:layout_height="42dp"
-        android:paddingBottom="5dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        >
+        android:layout_height="wrap_content">
+        <!--搜索框-->
         <LinearLayout
-            android:id="@+id/searchBar"
-            android:layout_width="0dp"
-            android:layout_weight="8"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/search_bg"
+            android:layout_width="360dp"
+            android:layout_height="42dp"
+            android:background="@color/wangyiyun"
+            android:baselineAligned="false"
             android:gravity="center_vertical"
-            android:layout_height="32dp">
+            android:orientation="horizontal"
+            android:fitsSystemWindows="false"
+            app:layout_scrollFlags="scroll|enterAlways">
 
-            <ImageView
-                android:layout_marginLeft="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/explore_search_icon">
+            <LinearLayout
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center">
+                 <ImageView
+                     android:layout_width="32dp"
+                     android:layout_height="32dp"
+                     android:src="@drawable/ic_back">
 
-            </ImageView>
-
-            <EditText
-                android:id="@+id/searchInput"
-                android:textColor="@color/myblack"
-                android:layout_marginLeft="16dp"
-                android:singleLine="true"
-                android:background="@null"
-                android:focusable="true"
-                android:focusableInTouchMode="true"
-                android:hint="搜索"
-                android:textSize="16dp"
+                 </ImageView>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/searchBar"
                 android:layout_width="240dp"
-                android:layout_height="wrap_content">
+                android:layout_height="32dp"
+                android:background="@drawable/search_bg"
+                android:gravity="center_vertical">
 
-            </EditText>
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="4dp"
+                    android:src="@mipmap/explore_search_icon"/>
+
+                <EditText
+                    android:id="@+id/searchInput"
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:focusable="true"
+                    android:cursorVisible="false"
+                    android:focusableInTouchMode="true"
+                    android:hint="搜索"
+                    android:singleLine="true"
+                    android:textColor="@color/myblack"
+                    android:textSize="16dp">
+
+                </EditText>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/search_text_bar"
+                android:layout_width="60dp"
+                android:layout_height="32dp"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="搜索"
+                    android:textColor="@color/mywhite"/>
+            </LinearLayout>
         </LinearLayout>
 
+        <!--筛选组件-->
         <LinearLayout
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:gravity="center"
-            android:layout_height="32dp">
-            <ImageView
-                android:layout_width="20dp"
-                android:src="@drawable/ic_location"
-                android:layout_height="20dp">
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/whitesmoke"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-            </ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="北京"
-                android:textColor="@color/mywhite"
-                android:layout_height="wrap_content">
+            <com.lixin.xinu.customerView.FilterLayout
+                android:id="@+id/s_sell"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                app:filter_text="销量" />
 
-            </TextView>
+            <com.lixin.xinu.customerView.FilterLayout
+                android:id="@+id/s_price"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                app:filter_text="价格" />
 
+            <com.lixin.xinu.customerView.FilterLayout
+                android:id="@+id/s_distance"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                app:filter_text="时间" />
+
+            <com.lixin.xinu.customerView.FilterLayout
+                android:id="@+id/s_all"
+                android:layout_width="90dp"
+                android:layout_height="wrap_content"
+                app:filter_text="综合" />
         </LinearLayout>
-
-    </LinearLayout>
-
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        android:layout_height="40dp">
-        <com.lixin.xinu.customerView.FilterLayout
-            android:layout_width="90dp"
-            android:id="@+id/s_sell"
-            android:layout_height="wrap_content"
-            app:filter_text="销量"/>
-        <com.lixin.xinu.customerView.FilterLayout
-            android:layout_width="90dp"
-            android:id="@+id/s_price"
-            android:layout_height="wrap_content"
-            app:filter_text="价格"/>
-        <com.lixin.xinu.customerView.FilterLayout
-            android:layout_width="90dp"
-            android:id="@+id/s_distance"
-            android:layout_height="wrap_content"
-            app:filter_text="时间"/>
-        <com.lixin.xinu.customerView.FilterLayout
-            android:layout_width="90dp"
-            android:id="@+id/s_all"
-            android:layout_height="wrap_content"
-            app:filter_text="综合"/>
-    </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        android:id="@+id/search_refreshLayout"
+        android:id="@+id/s_refreshlayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.scwang.smart.refresh.header.ClassicsHeader
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/search_recyclerview"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/s_recycleView"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </android.support.v7.widget.RecyclerView>
-
-        <com.scwang.smart.refresh.footer.ClassicsFooter
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent" />
 
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
-
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

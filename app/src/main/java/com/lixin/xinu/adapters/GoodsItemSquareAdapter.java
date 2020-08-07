@@ -1,8 +1,8 @@
 package com.lixin.xinu.adapters;
 
 import android.content.Context;
-import android.support.annotation.NonNull;
-import android.support.v7.widget.RecyclerView;
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,14 +13,13 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.lixin.xinu.R;
-import com.lixin.xinu.dto.SearchGoodsQueryParam;
-import com.lixin.xinu.dto.SearchRecommandParam;
 import com.lixin.xinu.entities.CommonPage;
 import com.lixin.xinu.entities.CommonResult;
 import com.lixin.xinu.entities.Goods;
 import com.lixin.xinu.netServices.GoodsService;
+import com.lixin.xinu.netServices.NetServicePrefixAddress;
 import com.lixin.xinu.utils.GlideImageLoader;
-import com.lixin.xinu.utils.RetrofitManager;
+import com.lixin.xinu.netServices.RetrofitManager;
 import com.scwang.smart.refresh.layout.api.RefreshLayout;
 import com.youth.banner.Banner;
 import com.youth.banner.BannerConfig;
@@ -40,7 +39,7 @@ public class GoodsItemSquareAdapter extends RecyclerView.Adapter<RecyclerView.Vi
 
     private final Context mContext;
 
-    private List<Goods> mDatas;
+    private List<Goods> mDatas = new ArrayList<>();
 
     private LayoutInflater inflater;
 
@@ -51,7 +50,7 @@ public class GoodsItemSquareAdapter extends RecyclerView.Adapter<RecyclerView.Vi
         this.mContext = mContext;
         inflater = LayoutInflater.from(mContext);
 
-        goodsService = RetrofitManager.createService(GoodsService.class);
+        goodsService = RetrofitManager.createService(GoodsService.class, NetServicePrefixAddress.ADMIN);
         mDatas = new ArrayList<>();
         // 初始化加载数据
         getGoodsList(null);

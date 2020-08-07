@@ -5,12 +5,12 @@ import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.annotation.NonNull;
-import android.support.annotation.RequiresApi;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.RecyclerView.OnScrollListener;
+import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.RecyclerView.OnScrollListener;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -22,11 +22,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.lixin.xinu.adapters.mainAdapter;
-import com.lixin.xinu.beans.WhatDo;
 import com.lixin.xinu.beans.shopMain;
 import com.lixin.xinu.R;
-
-import okhttp3.Request;
 
 /**
  * 这个是由viewpager 里面自动生成的

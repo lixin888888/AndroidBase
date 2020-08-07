@@ -1,90 +1,93 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="false"
     android:orientation="vertical"
-    android:layout_marginBottom="60dp"
+    android:layout_marginBottom="90dp"
     tools:context="com.lixin.xinu.fragments.MessageFragment">
 
-    <LinearLayout
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:background="@color/wangyiyun"
-        android:layout_height="42dp"
-        android:paddingBottom="5dp"
-        android:orientation="horizontal"
-        android:gravity="center_vertical"
-        >
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false">
+
         <LinearLayout
-            android:id="@+id/searchBar"
-            android:layout_width="0dp"
-            android:layout_weight="8"
-            android:layout_marginLeft="12dp"
-            android:background="@drawable/search_bg"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:background="@color/wangyiyun"
+            android:baselineAligned="false"
             android:gravity="center_vertical"
-            android:layout_height="32dp">
+            android:orientation="horizontal"
+            app:layout_scrollFlags="scroll|enterAlways">
 
-            <ImageView
-                android:layout_marginLeft="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@mipmap/explore_search_icon"
-                >
+            <LinearLayout
+                android:id="@+id/searchBar"
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="12dp"
+                android:layout_weight="8"
+                android:background="@drawable/search_bg"
+                android:gravity="center_vertical">
 
-            </ImageView>
-            <TextView
-                android:text="@string/search_nomal_text"
-                android:layout_marginLeft="16dp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:src="@mipmap/explore_search_icon">
 
-            </TextView>
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:text="@string/search_nomal_text">
+
+                </TextView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="32dp"
+                android:layout_weight="2"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_location">
+
+                </ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="北京"
+                    android:textColor="@color/mywhite">
+
+                </TextView>
+
+            </LinearLayout>
         </LinearLayout>
-        <LinearLayout
-            android:layout_weight="2"
-            android:layout_width="0dp"
-            android:gravity="center"
-            android:layout_height="32dp">
-            <ImageView
-                android:layout_width="20dp"
-                android:src="@drawable/ic_location"
-                android:layout_height="20dp">
-
-            </ImageView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:text="北京"
-                android:textColor="@color/mywhite"
-                android:layout_height="wrap_content">
-
-            </TextView>
-
-        </LinearLayout>
-    </LinearLayout>
-
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.scwang.smart.refresh.layout.SmartRefreshLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/refreshLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <com.scwang.smart.refresh.header.ClassicsHeader
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.lixin.xinu.fragments.MessageFragment">
 
-        <android.support.v7.widget.RecyclerView
+        <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerview"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-        </android.support.v7.widget.RecyclerView>
-
-        <com.scwang.smart.refresh.footer.ClassicsFooter
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="match_parent" />
 
     </com.scwang.smart.refresh.layout.SmartRefreshLayout>
 
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
 
-
-</LinearLayout>

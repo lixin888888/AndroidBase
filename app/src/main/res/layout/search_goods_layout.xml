@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:padding="6dp"
+    android:weightSum="10"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/sg_pic"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginEnd="8dp" />
+
+    <LinearLayout
+        android:layout_width="228dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:text="西红柿炒蛋盖饭"
+            android:id="@+id/sg_name"
+            android:ellipsize = "end"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:textColor="#000"
+            android:layout_height="22dp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="16dp">
+            <TextView
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:text="月售620"
+                android:id="@+id/sg_sale"
+                android:textSize="12sp"
+                android:layout_height="14sp" />
+            <TextView
+                android:id="@+id/costTime"
+                android:text="30分钟 1.9km"
+                android:layout_alignParentRight="true"
+                android:textSize="12sp"
+                android:layout_width="wrap_content"
+                android:layout_height="14sp" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="20dp">
+            <TextView
+                android:layout_alignParentStart="true"
+                android:textSize="12sp"
+                android:id="@+id/sendLevel"
+                android:text="起送20  配送5"
+                android:layout_width="wrap_content"
+                android:layout_height="14dp" />
+            <ImageView
+                android:layout_alignParentEnd="true"
+                android:src="@mipmap/kuaiyu"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/sg_keywords"
+            android:text="商品简介"
+            android:ellipsize = "end"
+            android:textSize="12sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="18dp">
+            <ImageView
+                android:layout_width="16dp"
+                android:src="@drawable/ic_youhui"
+                android:layout_height="16dp" />
+            <TextView
+                android:id="@+id/youhui1"
+                android:layout_width="wrap_content"
+                android:text="55减5"
+                android:textColor="#fb4e44"
+                android:padding="2dp"
+                android:textSize="10sp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/textview_youhui"
+                android:layout_height="16dp" />
+            <TextView
+                android:id="@+id/youhui2"
+                android:layout_width="wrap_content"
+                android:text="100减10"
+                android:textColor="#fb4e44"
+                android:padding="2dp"
+                android:textSize="10sp"
+                android:layout_marginLeft="4dp"
+                android:background="@drawable/textview_youhui"
+                android:layout_height="16dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="16dp">
+            <ImageView
+                android:layout_width="16dp"
+                android:src="@drawable/ic_weizhi"
+                android:layout_height="16dp" />
+            <TextView
+                android:id="@+id/sg_shopAddress"
+                android:layout_width="wrap_content"
+                android:text="宛城区梅溪路"
+                android:padding="2dp"
+                android:textSize="10sp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="4dp"
+                android:layout_height="16dp" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

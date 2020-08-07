@@ -4,27 +4,88 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="720dp">
 
-    <com.xw.repo.BubbleSeekBar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:bsb_bubble_color="@color/content_text_readed"
-        app:bsb_bubble_text_color="@color/colorPrimaryDark"
-        app:bsb_max="100.0"
-        app:bsb_min="0"
-        app:bsb_progress="0"
-        app:bsb_second_track_color="@color/content_text_readed"
-        app:bsb_section_count="5"
-        app:bsb_section_text_position="bottom_sides"
-        app:bsb_show_progress_in_float="true"
-        app:bsb_show_section_mark="true"
-        app:bsb_show_section_text="true"
-        app:bsb_show_thumb_text="true"
-        app:bsb_track_color="@color/content_text_readed"/>
-    <TextView
-        android:gravity="center"
-        android:layout_width="match_parent"
-        android:text="@string/filter_search_distance"
-        android:layout_height="wrap_content"/>
+        <com.google.android.flexbox.FlexboxLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:flexWrap="wrap">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/un_select_gray"
+                android:text="科技"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/un_select_gray"
+                android:text="科技"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/un_select_gray"
+                android:text="科技"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp"
+                android:textColor="@color/gray"
+                android:textSize="16sp" />
+
+
+
+
+
+        </com.google.android.flexbox.FlexboxLayout>
+
+        <com.warkiz.widget.IndicatorSeekBar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:isb_max="100"
+            app:isb_min="0"
+            app:isb_seek_smoothly="true"
+            app:isb_ticks_count="10"
+            app:isb_show_tick_marks_type="oval"
+            app:isb_tick_marks_size="8dp"
+            app:isb_show_tick_texts="true"
+            app:isb_tick_texts_size="15sp"
+            app:isb_tick_texts_color="@color/colorPrimary"
+            app:isb_thumb_color="@color/wangyiyun"
+            app:isb_thumb_size="12dp"
+            app:isb_show_indicator="rounded_rectangle"
+            app:isb_indicator_color="@color/wangyiyun"
+            app:isb_indicator_text_color="@color/colorAccent"
+            app:isb_indicator_text_size="14sp"
+            app:isb_track_background_color="@color/wangyiyun"
+            app:isb_track_background_size="2dp"
+            app:isb_track_progress_color="@color/wangyiyun"
+            app:isb_only_thumb_draggable="false"/>
+
+        <TextView
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:text="@string/filter_search_distance"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
 
 </LinearLayout>
