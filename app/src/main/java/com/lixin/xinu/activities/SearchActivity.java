@@ -127,6 +127,7 @@ public class SearchActivity extends AppCompatActivity implements View.OnClickLis
      */
     public void initData() {
         searchTextbar = findViewById(R.id.search_text_bar);
+        editText = findViewById(R.id.searchInput);
         searchTextbar.setOnClickListener(this);
 
         req.keyword = "小米";
